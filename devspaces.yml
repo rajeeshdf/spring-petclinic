@@ -1,5 +1,5 @@
 --- # devspaces.yml
-name: petclinic-demo
+name: petclinic
 description: Development environment for developing in SpringBoot with MySQL
 
 docker-file: Dockerfile
