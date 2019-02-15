@@ -1,0 +1,37 @@
+--- # devspaces.yml
+name: petclinic
+description: Development environment for developing in SpringBoot with MySQL
+
+docker-file: Dockerfile
+
+docker-build-includes: |
+  **/*
+
+ports:
+  - protocol: http
+    port-number: 8080
+    description: web app http port
+  - protocol: tcp
+    port-number: 8000
+    description: web app debug port
+
+environment-vars:
+  - name: MYSQL_DATABASE
+    value: petclinic
+    description: MySQL database name
+    scope: run
+    shared: Yes
+
+  - name: LANG
+    value: C.UTF-8
+    description:
+    scope: run
+    shared: Yes
+
+sync-ignore: |
+  .git
+  .idea
+  **/node_modules
+  .DS_Store
+  .data
+  .m2

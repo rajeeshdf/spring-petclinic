@@ -16,3 +16,5 @@ target/*
 _site/
 /buildspec.yml
 /.stignore
+.stversions
+.m2
