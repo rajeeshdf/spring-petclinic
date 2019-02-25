@@ -56,7 +56,7 @@ EOF
 start_app()
 {
   log "Running application..."
-  ./mvnw -Dmaven.local.repo=${DIR}/.m2 spring-boot:run
+  ./mvnw -Dmaven.repo.local=${DIR}/.m2 spring-boot:run
 }
 
 pushd ${DIR} > /dev/null
